@@ -28,7 +28,9 @@ class Blog extends React.Component {
                   }}
                 >
                   <Link
-                    style={{ boxShadow: `none` }}
+                    style={{
+                      textShadow: "-2px 1.5px black",
+                    }}
                     to={`blog${node.fields.slug}`}
                   >
                     {title}

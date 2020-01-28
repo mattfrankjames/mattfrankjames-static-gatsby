@@ -1,9 +1,9 @@
 module.exports = {
   siteMetadata: {
     // edit below
-    title: `Matt James Personal`,
+    title: `Matt Frank James`,
     author: `Matt James`,
-    description: `The personal website of Matt James.`,
+    description: `Matt James's Personal site built with Gatsby and hosted on Netlify. Opinions are my own.`,
     siteUrl: `https://gatsby-starter-blog-demo.netlify.com/`,
     social: {
       twitter: `mattfrankjames`,
@@ -70,8 +70,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Gatsby Starter Blog`,
-        short_name: `GatsbyJS`,
+        name: `Matt James's personal site`,
+        short_name: `mattfrankjames`,
         start_url: `/`,
         background_color: `#000000`,
         theme_color: `#34e4f6`,

@@ -15,6 +15,7 @@
     "gatsby-image": "^2.0.39",
     "gatsby-plugin-feed-mdx": "^1.0.0",
     "gatsby-plugin-google-analytics": "^2.0.18",
+    "gatsby-plugin-google-fonts": "^1.0.1",
     "gatsby-plugin-manifest": "^2.0.29",
     "gatsby-plugin-mdx": "^1.0.52",
     "gatsby-plugin-netlify-cms": "^4.0.0",
@@ -37,8 +38,10 @@
     "react-switch": "^5.0.0",
     "react-typography": "^0.16.19",
     "styled-components": "^4.2.0",
+    "typeface-holtwood-one-sc": "^0.0.71",
     "typeface-merriweather": "0.0.72",
     "typeface-montserrat": "0.0.54",
+    "typeface-roboto": "^0.0.75",
     "typography": "^0.16.19",
     "typography-theme-wordpress-2016": "^0.16.19"
   },
