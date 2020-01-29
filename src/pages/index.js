@@ -1,14 +1,12 @@
 import React from "react"
-import { Link } from "gatsby"
+import { Link, graphql } from "gatsby"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import Button from "../components/button"
 
 class IndexPage extends React.Component {
   render() {
     const siteTitle = "Matt Frank James"
-
     return (
       <Layout location={this.props.location} title={siteTitle}>
         <SEO
@@ -22,9 +20,6 @@ class IndexPage extends React.Component {
           I've also been know to take photographs, abuse the guitar and play in
           the woods on bikes.
         </p>
-        <Link to="/blog/">
-          <Button marginTop="35px">Go to Blog</Button>
-        </Link>
       </Layout>
     )
   }
