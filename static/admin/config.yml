@@ -1,6 +1,6 @@
 backend:
-  name: mattfrankjames-personal-site
-  repo: mattfrankjames-static-gatsby
+  name: github
+  repo: mattfrankjames/mattfrankjames-static-gatsby
 
 media_folder: static/assets
 public_folder: assets
