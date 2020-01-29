@@ -50,6 +50,15 @@ module.exports = {
           },
           {
             resolve: `gatsby-remark-vscode`,
+            options: {
+              colorTheme: "ayu-owl",
+              extensions: [
+                {
+                  identifier: "dermohamad.ayu-owl",
+                  version: "0.5.0",
+                },
+              ],
+            },
           },
           {
             resolve: `gatsby-remark-copy-linked-files`,

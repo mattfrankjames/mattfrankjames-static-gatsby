@@ -29,7 +29,8 @@ class Blog extends React.Component {
                 >
                   <Link
                     style={{
-                      textShadow: "-2px 1.5px black",
+                      fontFamily: "Holtwood One SC, serif",
+                      fontWeight: "400",
                     }}
                     to={`blog${node.fields.slug}`}
                   >
