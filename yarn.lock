@@ -14168,6 +14168,11 @@ typeface-holtwood-one-sc@^0.0.71:
   resolved "https://registry.yarnpkg.com/typeface-holtwood-one-sc/-/typeface-holtwood-one-sc-0.0.71.tgz#d09a43a30bf8b9f33617ae2cb1c3a93133954c90"
   integrity sha512-NwXNitxdtmAl4GpRRVxwrW8MwIsK3hsRDpE6HyAsgsp1ipDmUFBZODKVWMDaVNAFLXe6od6NP/bgHirEjC/hhw==
 
+typeface-ibm-plex-mono@^0.0.61:
+  version "0.0.61"
+  resolved "https://registry.yarnpkg.com/typeface-ibm-plex-mono/-/typeface-ibm-plex-mono-0.0.61.tgz#ee7f12643e2bfee5c5c6915350005d6dfdaa66fd"
+  integrity sha512-4Pzza33ihcW1l9qSs6WmRRb6FxVoDvpoTws55V9rwN7zVqURFh1c/i4qWCmHJ0Dyr0c+pYgQVyb/aAwsRjv2Lg==
+
 typeface-merriweather@0.0.72:
   version "0.0.72"
   resolved "https://registry.yarnpkg.com/typeface-merriweather/-/typeface-merriweather-0.0.72.tgz#2b990f5293252052d51d170c82d3892319ff0555"

@@ -39,6 +39,7 @@
     "react-typography": "^0.16.19",
     "styled-components": "^4.2.0",
     "typeface-holtwood-one-sc": "^0.0.71",
+    "typeface-ibm-plex-mono": "^0.0.61",
     "typeface-merriweather": "0.0.72",
     "typeface-montserrat": "0.0.54",
     "typeface-roboto": "^0.0.75",

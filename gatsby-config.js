@@ -4,7 +4,7 @@ module.exports = {
     title: `Matt Frank James`,
     author: `Matt James`,
     description: `Matt James's Personal site built with Gatsby and hosted on Netlify. Opinions are my own.`,
-    siteUrl: `https://gatsby-starter-blog-demo.netlify.com/`,
+    siteUrl: `https://mattfrankjames.com/`,
     social: {
       twitter: `mattfrankjames`,
     },
@@ -29,6 +29,13 @@ module.exports = {
       options: {
         path: `${__dirname}/content/assets`,
         name: `assets`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/src/images`,
+        name: `images`,
       },
     },
     {

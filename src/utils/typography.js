@@ -23,6 +23,12 @@ Wordpress2016.overrideThemeStyles = () => {
     body: {
       fontFamily: ["roboto", "sans-serif"].join(","),
     },
+    pre: {
+      fontFamily: ["IBM Plex Mono", "monospace"].join(","),
+    },
+    code: {
+      fontFamily: ["IBM Plex Mono", "monospace"].join(","),
+    },
   }
 }
 

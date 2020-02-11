@@ -15,13 +15,14 @@ class Layout extends React.Component {
     const { location, title, children } = this.props
     const rootPath = `${__PATH_PREFIX__}/`
     const blogPath = `${__PATH_PREFIX__}/blog/`
-    let header
+    let header, mainWrap
     // let main
     // if (location.pathname === rootPath) {
     //   main =(
     //     <main style={{}}>{children}</main>
     //   )
     // }
+
     if (location.pathname === rootPath || location.pathname === blogPath) {
       header = (
         <div
@@ -102,16 +103,31 @@ class Layout extends React.Component {
         </div>
       )
     }
-    return (
-      <Wrapper>
-        <GlobalStyle />
-        <header
+    if (this.props.home) {
+      mainWrap = (
+        <div
           style={{
-            padding: `1em`,
+            marginLeft: `auto`,
+            marginRight: `auto`,
+            maxWidth: rhythm(48),
+            minHeight: `100%`,
+            padding: `${rhythm(1.5)} ${rhythm(3 / 4)}`,
+            background: `black`,
           }}
         >
-          {header}
-        </header>
+          <main
+            style={{
+              display: "grid",
+              gridTemplateColumns: "1fr 1fr",
+              gridGap: "1rem",
+            }}
+          >
+            {children}
+          </main>
+        </div>
+      )
+    } else {
+      mainWrap = (
         <div
           style={{
             marginLeft: `auto`,
@@ -124,6 +140,19 @@ class Layout extends React.Component {
         >
           <main>{children}</main>
         </div>
+      )
+    }
+    return (
+      <Wrapper>
+        <GlobalStyle />
+        <header
+          style={{
+            padding: `1em`,
+          }}
+        >
+          {header}
+        </header>
+        {mainWrap}
         <Footer>
           © {new Date().getFullYear()} Matthew James, Built with
           {` `}
