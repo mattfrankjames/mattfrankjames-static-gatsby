@@ -1,6 +1,7 @@
 import React from "react"
 import { graphql } from "gatsby"
 import Img from "gatsby-image"
+import Link from "gatsby-link"
 import styled from "styled-components"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
@@ -13,40 +14,52 @@ const HomePage = ({ data, location }) => {
       {/* <img style={{ margin: 0 }} src="./GatsbyScene.svg" alt="Gatsby Scene" /> */}
       {/* <Img fixed={data.file.childImageSharp.fixed} alt="Portait of Renaya" /> */}
       <ImgWrap>
-        <Img
-          fluid={data.imageTwo.childImageSharp.fluid}
-          imgStyle={{
-            transition: "filter 0.4s ease-out",
-            objectPosition: "center 60px",
-            marginBottom: "1rem",
-            marginRight: "1rem",
-          }}
-          className="card--first"
-        />
-        <Img
-          fluid={data.imageOne.childImageSharp.fluid}
-          imgStyle={{
-            objectPosition: "-60px 50px",
-            transition: "filter 0.4s ease-out",
-            marginBottom: "1rem",
-          }}
-          className="card--second"
-        />
-        <Img
-          className="card--third"
-          imgStyle={{
-            transition: "filter 0.4s ease-out",
-            marginRight: "1rem",
-          }}
-          fluid={data.imageThree.childImageSharp.fluid}
-        />
-        <Img
-          className="card--fourth"
-          fluid={data.imageFour.childImageSharp.fluid}
-          imgStyle={{
-            transition: "filter 0.4s ease-out",
-          }}
-        />
+        <Link to="/DesignGallery">
+          <Img
+            fluid={data.imageTwo.childImageSharp.fluid}
+            imgStyle={{
+              transition: "filter 0.4s ease-out",
+              objectPosition: "center 50px",
+              marginBottom: "1rem",
+              marginRight: "1rem",
+            }}
+            className="card--first"
+            alt="Run Bonneville logo"
+          />
+        </Link>
+        <Link to="/PhotoGallery">
+          <Img
+            fluid={data.imageOne.childImageSharp.fluid}
+            imgStyle={{
+              objectPosition: "-60px 50px",
+              transition: "filter 0.4s ease-out",
+              marginBottom: "1rem",
+            }}
+            className="card--second"
+            alt="Protait of Renaya"
+          />
+        </Link>
+        <Link to="/WebGallery">
+          <Img
+            className="card--third"
+            imgStyle={{
+              transition: "filter 0.4s ease-out",
+              marginRight: "1rem",
+            }}
+            fluid={data.imageThree.childImageSharp.fluid}
+            alt="image of react codebase"
+          />
+        </Link>
+        <Link to="/blog">
+          <Img
+            className="card--fourth"
+            fluid={data.imageFour.childImageSharp.fluid}
+            imgStyle={{
+              transition: "filter 0.4s ease-out",
+            }}
+            alt="screen shot of blog post"
+          />
+        </Link>
       </ImgWrap>
       <div className="contactCard">
         <h1>Hi There.</h1>
