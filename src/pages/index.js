@@ -19,9 +19,10 @@ const HomePage = ({ data, location }) => {
             fluid={data.imageTwo.childImageSharp.fluid}
             imgStyle={{
               transition: "filter 0.4s ease-out",
-              objectPosition: "center 50px",
+              objectPosition: "center 55px",
               marginBottom: "0",
-              marginRight: "1rem",
+              marginRight: "0",
+              transform: "rotate(-5deg)",
             }}
             className="card--first"
             alt="Run Bonneville logo"
@@ -106,21 +107,28 @@ const ImgWrap = styled.div`
   transform: rotate(-5deg);
   .card--first {
     clip-path: polygon(0 100%, 99% 100%, 100% 33%);
+    height: 100%;
   }
   .card--second {
     clip-path: polygon(0 100%, 99% 100%, 0 36%);
+    height: 100%;
   }
   .card--third {
     clip-path: polygon(0 0, 100% 65%, 100% 0);
+    height: 100%;
   }
   .card--fourth {
     clip-path: polygon(0 0, 0 68%, 100% 0);
+    height: 100%;
   }
   img {
     filter: grayscale(70%);
     &:hover {
       filter: grayscale(0%);
     }
+  }
+  a {
+    box-shadow: none;
   }
 `
 // export const query = graphql`
