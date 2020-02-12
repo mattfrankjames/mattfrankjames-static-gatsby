@@ -20,7 +20,7 @@ const HomePage = ({ data, location }) => {
             imgStyle={{
               transition: "filter 0.4s ease-out",
               objectPosition: "center 50px",
-              marginBottom: "1rem",
+              marginBottom: "0",
               marginRight: "1rem",
             }}
             className="card--first"
@@ -33,7 +33,7 @@ const HomePage = ({ data, location }) => {
             imgStyle={{
               objectPosition: "-60px 50px",
               transition: "filter 0.4s ease-out",
-              marginBottom: "1rem",
+              marginBottom: "0",
             }}
             className="card--second"
             alt="Protait of Renaya"
