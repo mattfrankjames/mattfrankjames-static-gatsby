@@ -10,6 +10,13 @@ function Layout({ location, title, children, home }) {
         color: #e8e8e8;
         background: black;
       }
+    .cls-1,.cls-2{fill:#f1f2f2;}.cls-1,.cls-3,.cls-4,.cls-5{stroke:#231f20;stroke-miterlimit:10;}.cls-3{fill:#fff;}.cls-4{fill:#f3bb3a;}.cls-5{fill:#b3b1b1;}
+    .caution {
+      width: 95%;
+      max-width: 300px;
+      margin: 1em auto;
+      display: block;
+    }
     `
   const rootPath = `${__PATH_PREFIX__}/`
   const blogPath = `${__PATH_PREFIX__}/blog/`
@@ -17,16 +24,7 @@ function Layout({ location, title, children, home }) {
 
   if (location.pathname === rootPath || location.pathname === blogPath) {
     header = (
-      <div
-        style={{
-          width: `95%`,
-          maxWidth: `1200px`,
-          margin: `0 auto`,
-          display: `flex`,
-          justifyContent: `space-between`,
-          alignItems: `center`,
-        }}
-      >
+      <HeaderInner>
         <h1
           style={{
             ...scale(1.5),
@@ -51,23 +49,23 @@ function Layout({ location, title, children, home }) {
             <li>
               <Link to="/blog/">Writing</Link>
             </li>
+            <li>
+              <Link to="/WebGallery/">Web Work</Link>
+            </li>
+            <li>
+              <Link to="/PhotoGallery/">Photography</Link>
+            </li>
+            <li>
+              <Link to="/DesignGallery/">Design</Link>
+            </li>
           </ul>
         </Nav>
-      </div>
+      </HeaderInner>
     )
   } else {
     header = (
-      <div
-        style={{
-          width: `95%`,
-          maxWidth: `1200px`,
-          margin: `0 auto`,
-          display: `flex`,
-          justifyContent: `space-between`,
-          alignItems: `center`,
-        }}
-      >
-        <h3
+      <HeaderInner>
+        <h2
           style={{
             fontFamily: `Holtwood One SC, sans-serif`,
             marginTop: 0,
@@ -84,15 +82,24 @@ function Layout({ location, title, children, home }) {
           >
             {title}
           </Link>
-        </h3>
+        </h2>
         <Nav>
           <ul>
             <li>
               <Link to="/blog/">Writing</Link>
             </li>
+            <li>
+              <Link to="/WebGallery/">Web Work</Link>
+            </li>
+            <li>
+              <Link to="/PhotoGallery/">Photography</Link>
+            </li>
+            <li>
+              <Link to="/DesignGallery/">Design</Link>
+            </li>
           </ul>
         </Nav>
-      </div>
+      </HeaderInner>
     )
   }
   if (home) {
@@ -107,15 +114,7 @@ function Layout({ location, title, children, home }) {
           background: `black`,
         }}
       >
-        <main
-          style={{
-            display: "grid",
-            gridTemplateColumns: "1fr 1fr",
-            gridGap: "1rem",
-          }}
-        >
-          {children}
-        </main>
+        <Main>{children}</Main>
       </div>
     )
   } else {
@@ -153,7 +152,34 @@ function Layout({ location, title, children, home }) {
     </Wrapper>
   )
 }
-
+const Main = styled.main`
+  @media (min-width: 768px) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 1rem;
+  }
+`
+const HeaderInner = styled.div`
+  width: 95%;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  @media (min-width: 1229px) {
+    flex-direction: row;
+    h1 {
+      margin-right: 1rem;
+    }
+  }
+  @supports (gap: 1rem) {
+    gap: 1rem;
+    h1 {
+      margin-right: 0;
+    }
+  }
+`
 const Wrapper = styled.div`
   min-height: 100vh;
   background: linear-gradient(
@@ -174,10 +200,29 @@ const Footer = styled.footer`
   padding: 1rem 0;
 `
 const Nav = styled.nav`
+  display: flex;
+  justify-content: center;
+  flex: 1;
+  width: 100%;
   ul {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
+    justify-content: space-around;
     list-style: none;
+    width: 95%;
+    @media (min-width: 1024px) {
+      width: 100%;
+    }
+    a {
+      box-shadow: none;
+      font-size: 1.1rem;
+      &:hover {
+        box-shadow: 0 1px 0 0 currentColor;
+      }
+    }
+    li {
+      margin-bottom: 0;
+    }
   }
 `
 

@@ -104,27 +104,48 @@ const ImgWrap = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-gap: 1rem;
-  transform: rotate(-5deg);
+  transform: rotate(-5deg) scale(0.95);
+  transition: transform 0.4s ease-out;
+  &:hover {
+    transform: rotate(0deg) scale(1);
+  }
   .card--first {
-    clip-path: polygon(0 100%, 99% 100%, 100% 33%);
+    clip-path: polygon(0 100%, 99% 100%, 100% 33%, 144px 144px);
     height: 100%;
+    transition: clip-path 0.4s ease-out;
+    &:hover {
+      clip-path: polygon(0 100%, 100% 100%, 100% 33%, 0% 0);
+    }
   }
   .card--second {
-    clip-path: polygon(0 100%, 99% 100%, 0 36%);
+    clip-path: polygon(0px 100%, 99% 100%, 117px 58.1%, 0px 25%);
     height: 100%;
+    transition: clip-path 0.4s ease-out;
+    &:hover {
+      clip-path: polygon(0px 100%, 99% 100%, 100% 0%, 0px 25%);
+    }
   }
   .card--third {
-    clip-path: polygon(0 0, 100% 65%, 100% 0);
+    clip-path: polygon(0 0, 50% 32%, 100% 65%, 100% 0);
     height: 100%;
+    transition: clip-path 0.4s ease-out;
+    &:hover {
+      clip-path: polygon(0 0, 0 65%, 100% 65%, 100% 0);
+    }
   }
   .card--fourth {
-    clip-path: polygon(0 0, 0 68%, 100% 0);
+    clip-path: polygon(0 0, 0 68%, 25% 50%, 100% 0);
     height: 100%;
+    transition: clip-path 0.4s ease-out;
+    &:hover {
+      clip-path: polygon(0 0, 0 68%, 100% 65%, 100% 0);
+    }
   }
   img {
     filter: grayscale(70%);
     &:hover {
       filter: grayscale(0%);
+      clip-path: polygon(0 0, 0 100%, 100% 100%, 100% 0);
     }
   }
   a {
