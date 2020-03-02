@@ -1,8 +1,8 @@
-import React from "react"
-import { Link } from "gatsby"
-import styled, { createGlobalStyle } from "styled-components"
+import React from 'react';
+import { Link } from 'gatsby';
+import styled, { createGlobalStyle } from 'styled-components';
 
-import { rhythm, scale } from "../utils/typography"
+import { rhythm, scale } from '../utils/typography';
 
 function Layout({ location, title, children, home }) {
   const GlobalStyle = createGlobalStyle`
@@ -17,10 +17,10 @@ function Layout({ location, title, children, home }) {
       margin: 1em auto;
       display: block;
     }
-    `
-  const rootPath = `${__PATH_PREFIX__}/`
-  const blogPath = `${__PATH_PREFIX__}/blog/`
-  let header, mainWrap
+    `;
+  const rootPath = `${__PATH_PREFIX__}/`;
+  const blogPath = `${__PATH_PREFIX__}/blog/`;
+  let header, mainWrap;
 
   if (location.pathname === rootPath || location.pathname === blogPath) {
     header = (
@@ -61,7 +61,7 @@ function Layout({ location, title, children, home }) {
           </ul>
         </Nav>
       </HeaderInner>
-    )
+    );
   } else {
     header = (
       <HeaderInner>
@@ -100,7 +100,7 @@ function Layout({ location, title, children, home }) {
           </ul>
         </Nav>
       </HeaderInner>
-    )
+    );
   }
   if (home) {
     mainWrap = (
@@ -116,7 +116,7 @@ function Layout({ location, title, children, home }) {
       >
         <Main>{children}</Main>
       </div>
-    )
+    );
   } else {
     mainWrap = (
       <div
@@ -131,7 +131,7 @@ function Layout({ location, title, children, home }) {
       >
         <main>{children}</main>
       </div>
-    )
+    );
   }
   return (
     <Wrapper>
@@ -150,7 +150,7 @@ function Layout({ location, title, children, home }) {
         <a href="https://www.gatsbyjs.org">Gatsby</a>
       </Footer>
     </Wrapper>
-  )
+  );
 }
 const Main = styled.main`
   @media (min-width: 768px) {
@@ -158,7 +158,7 @@ const Main = styled.main`
     grid-template-columns: 1fr 1fr;
     grid-gap: 1rem;
   }
-`
+`;
 const HeaderInner = styled.div`
   width: 95%;
   max-width: 1200px;
@@ -167,6 +167,9 @@ const HeaderInner = styled.div`
   justify-content: space-between;
   align-items: center;
   flex-direction: column;
+  h1 {
+    margin-bottom: 0 !important;
+  }
   @media (min-width: 1229px) {
     flex-direction: row;
     h1 {
@@ -179,7 +182,7 @@ const HeaderInner = styled.div`
       margin-right: 0;
     }
   }
-`
+`;
 const Wrapper = styled.div`
   min-height: 100vh;
   background: linear-gradient(
@@ -190,7 +193,7 @@ const Wrapper = styled.div`
     url(/code-bg.jpg);
   display: flex;
   flex-direction: column;
-`
+`;
 
 const Footer = styled.footer`
   text-align: center;
@@ -198,7 +201,7 @@ const Footer = styled.footer`
   width: 100%;
   background: black;
   padding: 1rem 0;
-`
+`;
 const Nav = styled.nav`
   display: flex;
   justify-content: center;
@@ -209,10 +212,11 @@ const Nav = styled.nav`
     align-items: flex-start;
     justify-content: space-around;
     list-style: none;
-    width: 95%;
-    @media (min-width: 1024px) {
-      width: 100%;
-    }
+    margin: 0;
+    /* width: 95%; */
+
+    width: 100%;
+
     a {
       box-shadow: none;
       font-size: 1.1rem;
@@ -224,6 +228,6 @@ const Nav = styled.nav`
       margin-bottom: 0;
     }
   }
-`
+`;
 
-export default Layout
+export default Layout;
