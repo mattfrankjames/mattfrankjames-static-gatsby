@@ -62,14 +62,14 @@ const HomePage = ({ data, location }) => {
           />
         </Link>
       </ImgWrap>
-      <contactCard>
+      <ContactCard>
         <h2>Hi There.</h2>
         <p>My name is Matt James and I make things on the web.</p>
         <p>
           I've also been know to take photographs, abuse the guitar and play in
           the woods on bikes.
         </p>
-      </contactCard>
+      </ContactCard>
     </Layout>
   );
 };
@@ -161,10 +161,10 @@ const ImgWrap = styled.div`
     }
   }
 `;
-const contactCard = styled.div`
+const ContactCard = styled.div`
   @media (max-width: 768px) {
     h2 {
-      margin-top: 0;
+      margin-top: 1rem !important; /*again, this is terrible*/
     }
   }
 `;

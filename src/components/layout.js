@@ -17,6 +17,9 @@ function Layout({ location, title, children, home }) {
       margin: 1em auto;
       display: block;
     }
+    main h1, main h2, main h3 {
+      margin-top: 0 !important; /*this is obviously not ok*/
+    }
     `;
   const rootPath = `${__PATH_PREFIX__}/`;
   const blogPath = `${__PATH_PREFIX__}/blog/`;
@@ -78,7 +81,7 @@ function Layout({ location, title, children, home }) {
               textDecoration: `none`,
               color: `inherit`,
             }}
-            to={`/blog/`}
+            to={`/`}
           >
             {title}
           </Link>
@@ -110,7 +113,7 @@ function Layout({ location, title, children, home }) {
           marginRight: `auto`,
           maxWidth: rhythm(42),
           minHeight: `100%`,
-          padding: `${rhythm(1)} ${rhythm(3 / 4)} ${rhythm(1.5)}`,
+          padding: `${rhythm(0)} ${rhythm(3 / 4)} ${rhythm(1.5)}`,
           background: `black`,
         }}
       >
@@ -138,7 +141,7 @@ function Layout({ location, title, children, home }) {
       <GlobalStyle />
       <header
         style={{
-          padding: `1em`,
+          padding: `1em 1em .75em`,
         }}
       >
         {header}
